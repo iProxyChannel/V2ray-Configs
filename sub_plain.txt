@@ -1,0 +1,2 @@
+vless://cf91f049-9846-46d4-b421-68b63a20f8de@51.250.47.193:443?security=reality&encryption=none&pbk=v6rib0-2FxBd1MnBxdylbIRIhvXywSj56QEtCkaEuBo&headerType=none&fp=random&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=ads.x5.ru&sid=27e53bbcab7593d7#VLESS_1_t.me/iProxyChannel
+vless://6d4d7835-927f-406e-9636-bc6c4d70e574@51.250.47.193:443?security=reality&encryption=none&pbk=iRbc5G3wZbluYutzDvrJlc356yJsEnhV1T4tvE-tCnM&headerType=none&fp=random&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=smartcaptcha.yandexcloud.net&sid=27e53bbcab7593d7#VLESS_2_t.me/iProxyChannel
