@@ -16,7 +16,7 @@ def clean_and_tag(line, index, protocol):
         config_part = line
         
     # ساختن نام جدید استاندارد: Protocol_Index | Brand
-    new_tag = f"{protocol.upper()}_{index}_{BRAND_TAG}"
+    new_tag = f"{protocol.upper()}_{index} {BRAND_TAG}"
     return f"{config_part}#{new_tag}"
 
 def main():
