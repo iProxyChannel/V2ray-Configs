@@ -1,3 +1,5 @@
+trojan://iProxyChannel.t.me@iProxyChannel.t.me:443?security=reality&headerType=none&type=tcp#%F0%9F%94%A5%20Telegram%3A%20t.me%2FiProxyChannel
+trojan://iProxyChannel.t.me@iProxyChannel.t.me:443?security=reality&headerType=none&type=tcp#%F0%9F%93%85%20Last%20update%3A%201405%2F3%2F26
 vless://4480161e-2c59-4d37-8736-675c9af32bf1@72.56.92.177:40443?security=reality&encryption=none&pbk=fWzCKXwvMXaacsl1DdFb1vKQ9l9cTK1G7udqmaYHL0Y&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=deepl.com&sid=01d1bf2d4755d40c#VLESS 1 t.me/iProxyChannel
 vless://1dda9d26-7c04-48a6-93b4-e30fe7a5da80@fin.ardor-cloud.ru:444?security=reality&encryption=none&pbk=U6VG49xvywXK5PSPuehF8M26Z-xl6qThYh_LeMhvcF8&fp=chrome&type=grpc&sni=web.max.ru&sid=84ba23f161dd9a15#VLESS 2 t.me/iProxyChannel
 vless://82dbc26e-2dcc-436a-84ee-f57d098209cd@94.143.231.133:443?security=reality&encryption=none&pbk=Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=de-av01.launch.tel&sid=afee962d#VLESS 3 t.me/iProxyChannel
