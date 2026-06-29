@@ -1,0 +1,40 @@
+name: Auto Scan and Build Subs
+
+on:
+  schedule:
+    - cron: '0 */12 * * *' # اجرای خودکار هر ۱۲ ساعت یک‌بار
+  workflow_dispatch: # امکان اجرای دستی از تب Actions
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install aiohttp
+
+    - name: Run Scanner and Builder
+      env:
+        SUB_LINKS: ${{ secrets.SUB_LINKS }} # خواندن لینک‌ها از سیکرت‌های گیت‌هاب
+      run: python build.py
+
+    - name: Commit and Push Changes
+      run: |
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git add sub_plain.txt sub_base64.txt
+        if ! git diff --cached --quiet; then
+          git commit -m "Automated Sub Update: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          git push
+        else
+          echo "No changes detected in subscriptions."
+        fi
