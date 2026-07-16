@@ -21,7 +21,7 @@ TCP_TIMEOUT = 2.5           # ثانیه، برای هر تست اتصال TCP
 TCP_ATTEMPTS = 2            # تعداد تست تکراری برای هر سرور (میانگین گرفته می‌شود)
 CONCURRENCY = 80            # حداکثر تعداد تست هم‌زمان
 
-TOP_N = 500                 # حداکثر تعداد کانفیگ نهایی
+TOP_N = 200                 # حداکثر تعداد کانفیگ نهایی
 
 IPAPI_URL = "http://ip-api.com/batch"
 IPAPI_BATCH_SIZE = 100       # سقف واقعی ip-api.com برای هر batch
