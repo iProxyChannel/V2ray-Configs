@@ -10,7 +10,7 @@ permissions:
 
 concurrency:
   group: auto-scan-build
-  cancel-in-progress: false # اجازه نده دو اجرا هم‌زمان روی هم push کنن
+  cancel-in-progress: false # جلوگیری از تداخل اجراهای هم‌زمان
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.10'
+        python-version: '3.11'
         cache: 'pip'
 
     - name: Install Dependencies
@@ -34,18 +34,22 @@ jobs:
 
     - name: Run Scanner and Builder
       env:
-        SUB_LINKS: ${{ secrets.SUB_LINKS }} # خواندن لینک‌ها از سیکرت‌های گیت‌هاب
-      run: python build.py
+        TG_API_ID: ${{ secrets.TG_API_ID }}
+        TG_API_HASH: ${{ secrets.TG_API_HASH }}
+        TG_SESSION: ${{ secrets.TG_SESSION }}
+        TARGET_CHANNEL: ${{ secrets.TARGET_CHANNEL }}
+      run: python generate_sub.py
 
     - name: Commit and Push Changes
       run: |
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
-        git add sub_plain.txt sub_base64.txt
+        git add sub.txt sub_b64.txt state.json
         if ! git diff --cached --quiet; then
           git commit -m "Automated Sub Update: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push
         else
-          echo "No changes detected in subscriptions."
+          echo "No changes detected in subscriptions or state."
         fi
+        
