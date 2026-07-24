@@ -247,7 +247,7 @@ def resolve_missing_hosts(hosts: set[str], geo_cache: dict) -> None:
 # ---------- برندینگ ----------
 
 def apply_branding(cfg: str, flag: str, channel_label: str, index: int) -> str:
-    label_text = f"{flag} {channel_label} | {index:03d}"
+    label_text = f"{flag} | {channel_label}"
     scheme = cfg.split("://", 1)[0].lower()
 
     if scheme == "vmess":
