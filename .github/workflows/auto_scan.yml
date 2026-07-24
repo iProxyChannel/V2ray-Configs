@@ -2,7 +2,7 @@ name: Auto Scan and Build Subs
 
 on:
   schedule:
-    - cron: '0 */12 * * *' # اجرای خودکار هر ۱۲ ساعت یک‌بار
+    - cron: '0 */23 * * *' # اجرای خودکار هر ۲۳ ساعت یک‌بار
   workflow_dispatch: # امکان اجرای دستی از تب Actions
 
 permissions:
