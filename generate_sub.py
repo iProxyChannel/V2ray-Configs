@@ -43,8 +43,8 @@ log = logging.getLogger("generate_sub")
 
 STATE_FILE = Path("state.json")
 SOURCES_FILE = Path("sources.txt")
-SUB_FILE = Path("sub.txt")
-SUB_B64_FILE = Path("sub_b64.txt")
+SUB_FILE = Path("sub_plain.txt")
+SUB_B64_FILE = Path("sub_base64.txt")
 
 CONFIG_PATTERN = re.compile(
     r"(?:vmess|vless|trojan|ss|ssr|hysteria|hysteria2|hy2|tuic)://[^\s`\"'<>]+",
