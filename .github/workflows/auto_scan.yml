@@ -37,14 +37,13 @@ jobs:
         TG_API_ID: ${{ secrets.TG_API_ID }}
         TG_API_HASH: ${{ secrets.TG_API_HASH }}
         TG_SESSION: ${{ secrets.TG_SESSION }}
-        TARGET_CHANNEL: ${{ secrets.TARGET_CHANNEL }}
       run: python generate_sub.py
 
     - name: Commit and Push Changes
       run: |
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
-        git add sub.txt sub_b64.txt state.json
+        git add sub_plain.txt sub_base64.txt state.json
         if ! git diff --cached --quiet; then
           git commit -m "Automated Sub Update: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
           git pull --rebase origin "${GITHUB_REF_NAME}"
@@ -52,4 +51,3 @@ jobs:
         else
           echo "No changes detected in subscriptions or state."
         fi
-        
