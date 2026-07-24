@@ -345,7 +345,8 @@ async def build_subscription(candidates: list[str], geo_cache: dict, target_chan
     b64_content = base64.b64encode(plain_content.encode("utf-8")).decode("utf-8")
     SUB_B64_FILE.write_text(b64_content, encoding="utf-8")
 
-    log.info("تعداد %d کانفیگ برتر با موفقیت در فایل‌های sub.txt و sub_b64.txt ذخیره شد.", len(final_configs))
+    log.info("تعداد %d کانفیگ برتر با موفقیت در فایل‌های sub_plain.txt و sub_base64.txt ذخیره شد.", len(final_configs))
+
 
 
 # ---------- main ----------
