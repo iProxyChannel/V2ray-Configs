@@ -8,7 +8,6 @@ snologypersian
 prrofile_purple
 daily_configs
 FreakConfig
-napsternetv
 iSafenet
 setemojia
 TARIK_vpn2
