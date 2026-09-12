@@ -57,7 +57,7 @@ TEST_POOL_SIZE = int(os.environ.get("TEST_POOL_SIZE", "1000"))
 TEST_CONCURRENCY = int(os.environ.get("TEST_CONCURRENCY", "50"))
 TEST_TIMEOUT = float(os.environ.get("TEST_TIMEOUT", "3.0"))
 TEST_ATTEMPTS = int(os.environ.get("TEST_ATTEMPTS", "2"))
-TOP_N = int(os.environ.get("TOP_N", "200"))
+TOP_N = int(os.environ.get("TOP_N", "500"))
 
 CHANNEL_LABEL_OVERRIDE = os.environ.get("CHANNEL_LABEL", "").strip()
 
